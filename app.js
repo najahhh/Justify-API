@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.text());
 var rateLimit = [];
 
-const connection = mysql.createPool({
+const connection = mysql.createConnection({
     host: 'us-cdbr-east-03.cleardb.com',
     user: 'b0a27d5fdb9779',
     password: '5e9aed61',
