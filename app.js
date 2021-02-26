@@ -11,14 +11,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.text());
 var rateLimit = [];
 
-const connection = mysql.createConnection({
+const connection = mysql.createPool({
     host: 'us-cdbr-east-03.cleardb.com',
     user: 'b0a27d5fdb9779',
     password: '5e9aed61',
     database: 'heroku_97ca0c133423153'
 });
 
-
+module.exports = connection;
 connection.connect(function (err) {
     if (!err) {
         console.log("Database is connected ...");
