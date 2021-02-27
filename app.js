@@ -18,13 +18,7 @@ var connection = mysql.createPool({
 });
 
 
-connection.connect(function (err) {
-    if (!err) {
-        console.log("Database is connected ...");
-    } else {
-        console.log(err);
-    }
-});
+
 
 app.get('/api', (req, res) => {
     res.json({
